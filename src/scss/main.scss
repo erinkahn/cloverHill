@@ -1,0 +1,301 @@
+
+@import 'reset';
+
+
+
+* {
+	box-sizing: border-box;
+}
+
+
+
+.hero{
+	position: relative;
+
+	//yellow background
+	img{
+		position: absolute;
+		top: 80px;
+		height: 60vh;
+		width: 100%;
+		z-index: -1;
+
+		@media screen and (min-width: 768px){
+			top: 100px;
+			height: 70vh;
+		}
+
+		@media screen and (min-width: 1024px){
+			height: 85vh;
+			top: 100px;
+		}
+
+		@media screen and (min-width: 1440px){
+			height: 93vh;
+			top: 120px;
+		}
+	}
+}
+
+
+
+
+
+header{
+
+	nav{
+		cursor: pointer;
+
+		div{
+
+			img{
+				position: absolute;
+				top: 6%;
+				left: 0;
+				margin-left: 6%;
+				max-width: 30px;
+			}
+		}
+
+		// hide nav 
+		.nav_list{
+			
+			display: none;
+
+			padding-top: 38%;
+			margin-left: 5%;
+			transform: rotate(16deg);
+
+			@media screen and (min-width: 768px){
+				padding-top: 18%;
+				margin-left: 19%;
+				transform: rotate(10deg);
+			}
+
+			@media screen and (min-width: 1024px){
+				padding-top: 14%;
+				transform: rotate(8deg);
+			}
+
+			@media screen and (min-width: 1224px){
+				padding-top: 12%;
+				transform: rotate(6deg);
+			}
+			
+
+			li{
+				font-family: futura;
+				color: #ff00ff;
+				padding: 0 20px;
+
+				@media screen and (min-width: 1024px){
+					padding: 0 30px;
+				}
+				
+			}
+		}
+
+		// show nav on click
+		.nav_open &{
+
+			.nav_list{
+				display: flex;
+
+				li{
+					flex-direction: row;
+					
+				}
+				
+				
+			}
+		}
+	}
+
+	//logo
+	div{
+		display: flex;
+		justify-content: flex-end;
+		margin-right: 8%;
+
+		img{
+			max-width: 20%;
+			@media screen and (min-width: 768px){
+				padding-top: 2%;
+			}
+		}
+	}
+}
+
+
+
+
+.models{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	margin: 0 20px;
+
+	@media screen and (min-width: 1224px){
+		margin: 0 55px;
+		justify-content: space-between;
+	}
+
+	img{
+		height: 500px;
+		z-index: 1;
+
+		//fix width of 1st person
+		&:first-child{
+			width: 26%;
+
+			@media screen and (min-width: 1224px){
+				width: 24%;
+			}
+		}
+
+		//move second girl down
+		&:nth-child(2){
+			@media screen and (min-width: 768px){
+				margin-top: 35px;
+				width: 39%;
+			}
+
+			@media screen and (min-width: 1024px){
+				width: 30%;
+			}
+
+			@media screen and (min-width: 1224px){
+				width: 27%;
+			}
+		}
+
+		//move 3rd guy down
+		&:nth-child(3){
+			@media screen and (min-width: 768px){
+				margin-top: 45px;
+				width: 27%;
+			}
+
+			@media screen and (min-width: 1224px){
+				width: 24%;
+			}
+
+			@media screen and (min-width: 1440px){
+				margin-top: 60px;
+			}
+		}
+
+		//move last guy down
+		&:nth-child(4){
+			margin-top: 49px;
+
+			@media screen and (min-width: 768px){
+				margin-top: 85px;
+				width: 39%;
+			}
+
+			@media screen and (min-width: 1024px){
+				margin-top: 105px;
+				width: 30%;
+			}
+
+			@media screen and (min-width: 1224px){
+				width: 25%;
+			}
+
+			@media screen and (min-width: 1440px){
+				margin-top: 133px;
+			}
+		}
+
+		//hide 2 people on mobile
+		&:nth-child(1), &:nth-child(3){
+			display: none;
+		}
+
+		//show 2 other ppl on desktop
+		@media screen and (min-width: 768px){
+			height: 580px;
+			width: 30%;
+
+			&:nth-child(1), &:nth-child(3){
+				display: flex;
+			}
+		}
+
+		//expand height of people
+		@media screen and (min-width: 1024px){
+			height: 690px;
+		}
+
+		//make people thinner 
+		@media screen and (min-width: 1224px){
+			width: 24%;
+		}
+
+		@media screen and (min-width: 1440px){
+			height:830px;
+		}
+	}
+}
+
+
+//spring must haves
+.hero-header{
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	justify-content: center;
+
+	@media screen and (min-width: 768px){
+		justify-content: flex-start;
+		margin-left: 4%;
+	}
+
+
+	h1{
+		margin-top: -68%;
+		position: absolute;
+		text-shadow: 1px 1px 2px #000;
+		text-align: left;
+		color: #fff;
+		font-size: 54px;
+		z-index: 2;
+		text-transform: uppercase;
+		font-family: futura;
+		font-weight: bold;
+
+		@media screen and (min-width: 768px){
+			margin-top: -48%;
+			font-size: 59px;
+		}
+
+		@media screen and (min-width: 1024px){
+			margin-top: -40%;
+			font-size: 64px;
+		}
+
+		@media screen and (min-width: 1224px){
+			margin-top: -33%;
+			font-size: 60px;
+		}
+
+		@media screen and (min-width: 1440px){
+			margin-top: -30%;
+			font-size: 67px;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
