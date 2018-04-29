@@ -141,7 +141,7 @@ header{
 	}
 
 	img{
-		height: 500px;
+		// height: 500px;
 		z-index: 1;
 
 		//fix width of 1st person
@@ -221,7 +221,7 @@ header{
 
 		//show 2 other ppl on desktop
 		@media screen and (min-width: 768px){
-			height: 580px;
+			// height: 580px;
 			width: 30%;
 
 			&:nth-child(1), &:nth-child(3){
@@ -230,18 +230,18 @@ header{
 		}
 
 		//expand height of people
-		@media screen and (min-width: 1024px){
-			height: 690px;
-		}
+		// @media screen and (min-width: 1024px){
+		// 	height: 690px;
+		// }
 
 		//make people thinner 
 		@media screen and (min-width: 1224px){
 			width: 24%;
 		}
 
-		@media screen and (min-width: 1440px){
-			height:830px;
-		}
+		// @media screen and (min-width: 1440px){
+		// 	height:830px;
+		// }
 	}
 }
 
@@ -296,11 +296,69 @@ header{
 
 
 
+.whats-new{
+
+
+	h2{
+		display: flex;
+		justify-content: center;
+		font-family: futura;
+		color: #000;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-top: 10%;
+		font-size: 1.3em;
+	}
+
+	.buttons{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		top: 40%;
+		margin: 0 30px;
+
+		img{
+			z-index: 9;
+		}
+	}
+
+	.slider{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		overflow: hidden;
+		z-index: -2;
+
+		img{
+			z-index: -2;
+			padding: 40px;
+			
+			@media screen and (min-width: 768px){
+				max-width: 390px;
+			}
+
+		}
+	}
+
+}
 
 
 
+.image-grid{
 
+	.grid-images{
+		max-width: 946px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
 
+		@media screen and (min-width: 768px){
+			margin: auto 126px;
+		}
+
+		
+	}
+}
 
 
 

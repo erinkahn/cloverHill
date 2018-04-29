@@ -181,7 +181,6 @@ header div img {
 }
 
 .models img {
-	height: 500px;
 	z-index: 1;
 }
 
@@ -277,7 +276,6 @@ header div img {
 
 @media screen and (min-width: 768px) {
 	.models img {
-		height: 580px;
 		width: 30%;
 	}
 	.models img:nth-child(1), .models img:nth-child(3) {
@@ -285,21 +283,9 @@ header div img {
 	}
 }
 
-@media screen and (min-width: 1024px) {
-	.models img {
-		height: 690px;
-	}
-}
-
 @media screen and (min-width: 1224px) {
 	.models img {
 		width: 24%;
-	}
-}
-
-@media screen and (min-width: 1440px) {
-	.models img {
-		height: 830px;
 	}
 }
 
@@ -355,6 +341,61 @@ header div img {
 	.hero-header h1 {
 		margin-top: -30%;
 		font-size: 67px;
+	}
+}
+
+.whats-new h2 {
+	display: flex;
+	justify-content: center;
+	font-family: futura;
+	color: #000;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 10%;
+	font-size: 1.3em;
+}
+
+.whats-new .buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	top: 40%;
+	margin: 0 30px;
+}
+
+.whats-new .buttons img {
+	z-index: 9;
+}
+
+.whats-new .slider {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	overflow: hidden;
+	z-index: -2;
+}
+
+.whats-new .slider img {
+	z-index: -2;
+	padding: 40px;
+}
+
+@media screen and (min-width: 768px) {
+	.whats-new .slider img {
+		max-width: 390px;
+	}
+}
+
+.image-grid .grid-images {
+	max-width: 946px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+	.image-grid .grid-images {
+		margin: auto 126px;
 	}
 }
 
