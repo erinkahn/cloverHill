@@ -1,4 +1,4 @@
-# How to use the Circus Starter Template v1.4.0
+# How to use the Circus Starter Template v1.4.5
 
 ## 1. Getting a new project started with Github.
 You're probably looking at this readme file on GitHub right now! If you're somewhere else, go here: https://github.com/CreativeCircus/circus-starter
@@ -36,7 +36,9 @@ You'll see `dist` and `src` folders. If you're new, or you don't know what the d
 
 `dist` stands for "distribution". It's all the assets that your website needs to run. CSS for style (there's a reset in there too), JS for interactivity, and an image, as an example. Until you get good, just stay in `dist`.
 
-`src` stands for source. When you're ready to use transpiled SCSS, and concatenated, transpiled ES6, you need to separate the code you write (the source, `src`) from the code you deploy (or distribute, `dist`). At that time, start working in `src` and let gulp handle `src` for you. 
+`src` stands for source. When you're ready to use transpiled SCSS, and concatenated, transpiled ES6, you need to separate the code you write (the source, `src`) from the code you deploy (or distribute, `dist`). At that time, use `src` for files you need compiled/compressed/error-checked, like SCSS, JS, and images, and let gulp handle putting them in `dist` for you. Other stuff like fonts, video, or JS written by others (plugins), put straight in dist too.
+
+Paths written in your HTML, CSS, JS, etc to refer to other files will ALWAYS refer to them in dist. The websites only knows about dist. If you refer to files in src, you screwed up.
 
 ###  Getting started with this Starter Template
 
@@ -49,12 +51,26 @@ After you make a git repo for your new project, you'll see that it's literally j
 ## 3. Helpful Terminal Tools 
 *optional for designers and 1st quarter devs*
 
-Part of this project is a handful of tools to get you working faster. They run in your Terminal through a little utility called Gulp, and they will check your code for errors for you, and streamline other parts of your workflow.
+Part of this project is a handful of tools to get you working faster. They run in your Terminal through a little utility called Gulp, and will streamline your workflow and make you feel like a [l33t haXXor](https://en.wikipedia.org/wiki/Leet).
+
+#### What does it do?
+First, it opens your new project in your browser. Cool!
+
+After that, leave the terminal window open, and every time you save a code file, Gulp will
+- Compile SASS files in src into CSS files in dist (if you're using them)
+- Error check JS files in src
+- Compile JS (ES6+) files in src into JS (ES5) files in dist
+- Compress images in src and put them in dist (you should still try to size them appropriately and save them in the right format)
+- Refresh the Browser
+- Says sassy messages upon startup
+
+Frickin' magic right?
+
+### Setup
 
 There is some initial setup involved that you just need to do once. After that, just use this template for each project, and you're good to go.
 
 Start by opening the app named "Terminal" on your computer. It's in Applications/Utilities.
-
 
 ### One-time installs
 
@@ -63,30 +79,43 @@ We need to install some basics on your computer, just once, that all future proj
 #### Get your terminal initialized
 *You only need to do this once on your computer.*
 
+This is a good primer for how to use the terminal anyway.
+
+In your terminal, paste in this code, and press enter to run it.
+
 Run `touch ~/.bash_profile`.
 
-#### Install NVM
-*You only need to do this once on your computer.*
+This particular command doesn't show any success message, but most others will.
 
-NVM is Node Version Manager. It helps you install Node. Why do you need a version manager? Because they update Node all the time. 
-
-Go here: `https://github.com/creationix/nvm#install-script` and run the nvm install script in your Terminal.
-
-#### Install Node and NPM
+#### Install NVM, then Node and NPM
 *You only need to do this once on your computer.*
 
 Node is a super geeky command line tool for running code. You won't write any code for it for a while, but other people have written insanely useful tools that you can use without much effort, to make your life easier.
 
 NPM is Node Package Manager. It will fetch packages of these pre-written tools for you.
 
-Run `nvm install node` to install Node and NPM.
+NVM is Node Version Manager. It will install Node and NPM for you.
+
+Run this commands to install NVM:
+
+`curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash`
+
+Close and reopen your terminal, and verify it installed with this:
+
+`command -v nvm`
+
+If it didn't, try your luck with the [official instructions](https://github.com/creationix/nvm#installation).
+
+Then use nvm to install Node and NPM:
+
+`nvm install node`
 
 #### Install Gulp on your Computer
 *You only need to do this once on your computer.*
 
 Gulp is one of the most popular tools that runs on Node for helping web developers.
 
-Run `npm install gulp-cli -g` to install the main Gulp package for your whole computer.
+Run `npm install gulp-cli -g` to install the main Gulp package. The -g means "globally," as in, for your whole computer.
 
 ### Set up this project
 
@@ -106,15 +135,3 @@ Type `cd ` (with a space after it) into your terminal window, then drag and drop
 
 Run `gulp`.
 
-
-#### What does it do?
-First, it opens your new project in your browser. Cool!
-
-After that, leave the terminal window open, and every time you save a code file, Gulp will
-- Compile SASS files in src into CSS files in dist (if you're using them)
-- Error check JS files in src
-- Compile JS (ES6) files in src into JS (ES5) files in dist
-- Compress images in src and put them in dist (you should still try to size them appropriately and save them in the right format)
-- Refresh the Browser
-
-Frickin' magic right?

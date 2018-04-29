@@ -16,6 +16,16 @@ const gulp = require('gulp'),
 	browserSync = require('browser-sync').create()
 
 
+const genericErrorHandler = function (err) {
+	fancyLog("SCSS Issue: " + err.toString().red);
+	// console.log(err.toString());
+	this.emit('end');
+}
+
+gulp.task('html-refresh', function() {
+	gulp.watch(['src/js/**/*.js', 'dist/js/**/*.js', '*.html']).on("change", browserSync.reload);
+});
+	
 
 gulp.task('html-check', function() {
 	return watch('*.html', { ignoreInitial: false })
@@ -41,7 +51,7 @@ var htmllintReporter = function (filepath, issues) {
 
 
 // this task takes sass files and compiles them
-gulp.task('sass-compile', function () {
+gulp.task('sass-compile', () => {
 	return watch('src/scss/**/*.scss') // run over these files
 		.pipe(plumber())
 		.pipe(sourcemaps.init()) // make sourcemaps for chrome devtools
@@ -49,12 +59,12 @@ gulp.task('sass-compile', function () {
 			outputStyle: 'expanded',  // change to 'expanded' to make it readable
 			indentType: 'tab', 
 			indentWidth: 1,
-		}).on('error', sass.logError)) // on errors, show them
+		}))
 		.pipe(sourcemaps.write('./')) // put the sourcemaps with the css files
 		.pipe(gulp.dest((file) => file.base.replace('src', 'dist').replace('scss', 'css'))) // put the css files here.
 		.pipe(browserSync.stream()) // tell browsersync to send over the changes
 		.pipe(gulpFn(function(file) {
-			if (file.path.indexOf('.css.map') == -1) {
+			if (file.path.indexOf('.css.map') === -1) {
 				console.log("SCSS converted to CSS: ".cyan);
 				console.log(file.path.replace('src', 'dist').replace('scss', 'css'))
 			}
@@ -63,7 +73,7 @@ gulp.task('sass-compile', function () {
 
 
 // this task looks through js files for errors
-gulp.task('js-check', function () {
+gulp.task('js-check', () => {
 	// if eslint complains about a certain error, and you want to turn it off, or change it
 	// go here for the rules https://eslint.org/docs/rules/
 	// and you'll need to change them in the .eslintrc file in the root of the project.
@@ -79,49 +89,46 @@ gulp.task('js-check', function () {
 
 
 // this task looks through js files for errors
-gulp.task('js-compile', function () {
+gulp.task('js-compile', () => {
 	return watch('src/js/**/*.js') // watch these files
 		.pipe(plumber())
 		.pipe(sourcemaps.init()) // make sourcemaps for chrome devtools
-		.pipe(babel({ // run the js through babel to convert ES6 to ES5
-			presets: ['env'],
-		}))
+		.pipe(babel())
 		.on('error', function (err) {
 			console.warn('[JS Babel Error] '.red + err.message);
-			this.emit('end');
 		})
 		// .pipe(concat('./app.js')) // join all the js files into one // uncomment this line if you want to concatenate all JS files into one.
 		.pipe(sourcemaps.write('./')) // put the sourcemaps with the js files
 		.pipe(gulp.dest((file) => file.base.replace('src', 'dist'))) // put the js files here.
-		.pipe(browserSync.stream()) // tell browsersync to send over the changes
 		.pipe(gulpFn(function(file) {
-			if (file.path.indexOf('.js.map') == -1) {
+			if (file.path.indexOf('.js.map') === -1) {
 				console.log("JS generated: ".cyan);
 				console.log(file.path.replace('src', 'dist'));
 			}
 		}))
+		
 });
 
 // this task looks through js files for errors
-gulp.task('image-compress', function () {
+gulp.task('image-compress', () => {
 	let imgDest = 'dist/img/';
-	return watch('src/img/*.*') // watch these files
+	return watch('src/img/**/*.*') // watch these files
 		.pipe(plumber())
-		.pipe(changed(imgDest))
+		.pipe(changed((file) => file.base.replace('src', 'dist')))
 		.pipe(imagemin())
-		.pipe(gulp.dest(imgDest)) // put the image files here.
+		.pipe(gulp.dest((file) => file.base.replace('src', 'dist'))) // put the image files here.
 		.pipe(browserSync.stream()) // tell browsersync to send over the changes
 		.pipe(gulpFn(function(file) {
 			console.log("Image compressed and copied to: ".cyan);
-			console.log(file.history[1])
+			console.log(file.path.replace('src', 'dist'));
 		}))
 })
 
-gulp.task('welcome', function () {
+gulp.task('welcome', () => {
 	console.log(colors.red('Starting Circus Starter template gulpfile! Wizz, whirrrrr, bang, pop!'));
 })
 
-gulp.task('make-cool-shit', function () {
+gulp.task('make-cool-shit', () => {
 	setTimeout(() => {
 		console.log(' ');
 		console.log(' ================================================ '.red);
@@ -143,25 +150,26 @@ gulp.task('start-browsersync', function() {
 })
 
 
- // running `gulp` runs this task. this task sort of branches off into the others as needed
+// running `gulp` runs this task. this task sort of branches off into the others as needed
 gulp.task('default', [
 	'welcome', 
+	'start-browsersync', 
+	'html-refresh', 
 	'html-check', 
 	'image-compress', 
 	'js-check', 
 	'js-compile', 
 	'sass-compile', 
-	'start-browsersync', 
 	'make-cool-shit'
 ]);
 
 gulp.task('no-browser-sync', [
 	'welcome', 
+	'html-refresh', 
 	'html-check', 
 	'image-compress', 
 	'js-check', 
 	'js-compile', 
 	'sass-compile', 
-	// 'start-browsersync', 
 	'make-cool-shit'
 ]);
