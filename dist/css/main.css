@@ -56,37 +56,20 @@ table {
 	box-sizing: border-box;
 }
 
-.hero {
-	background-color: red;
-	position: relative;
-}
-
-.hero img {
-	position: absolute;
-	top: 80px;
-	height: 70vh;
-	width: 100%;
-	z-index: -1;
+header {
+	height: 26vw;
+	width: 100vw;
 }
 
 @media screen and (min-width: 768px) {
-	.hero img {
-		top: 100px;
-		height: 70vh;
+	header {
+		height: 17vw;
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.hero img {
-		height: 85vh;
-		top: 100px;
-	}
-}
-
-@media screen and (min-width: 1440px) {
-	.hero img {
-		height: 93vh;
-		top: 120px;
+	header {
+		height: 10vw;
 	}
 }
 
@@ -170,8 +153,7 @@ header div img {
 .models {
 	position: relative;
 	width: 100vw;
-	height: 60vw;
-	margin: 0;
+	height: 53vw;
 	background-image: url(../img/heroBkg.png);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
@@ -179,101 +161,124 @@ header div img {
 	text-align: center;
 }
 
+@media screen and (max-width: 767px) {
+	.models {
+		width: 100vw;
+		height: 95vw;
+		margin: 0;
+		background-size: 178% auto;
+	}
+}
+
 .models img {
 	position: relative;
-	height: 90%;
-	top: 10vw;
+	height: 100%;
+	top: 8vw;
+	padding: 0 3%;
+}
+
+@media screen and (max-width: 767px) {
+	.models img:nth-child(1), .models img:nth-child(4) {
+		display: none;
+	}
 }
 
 .models h1 {
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	text-shadow: 1px 1px 2px #000;
 	text-align: left;
 	color: #fff;
-	font-size: 54px;
+	font-size: 45px;
 	z-index: 2;
 	text-transform: uppercase;
 	font-family: futura;
 	font-weight: bold;
-}
-
-.hero-header {
-	display: flex;
-	flex-wrap: wrap;
-	position: relative;
-	justify-content: center;
+	margin-left: 5%;
 }
 
 @media screen and (min-width: 768px) {
-	.hero-header {
-		justify-content: flex-start;
-		margin-left: 4%;
-	}
-}
-
-.hero-header h1 {
-	margin-top: -68%;
-	position: absolute;
-	text-shadow: 1px 1px 2px #000;
-	text-align: left;
-	color: #fff;
-	font-size: 54px;
-	z-index: 2;
-	text-transform: uppercase;
-	font-family: futura;
-	font-weight: bold;
-}
-
-@media screen and (min-width: 768px) {
-	.hero-header h1 {
-		margin-top: -48%;
-		font-size: 59px;
+	.models h1 {
+		font-size: 50px;
 	}
 }
 
 @media screen and (min-width: 1024px) {
-	.hero-header h1 {
-		margin-top: -40%;
+	.models h1 {
 		font-size: 64px;
 	}
 }
 
 @media screen and (min-width: 1224px) {
-	.hero-header h1 {
-		margin-top: -33%;
-		font-size: 60px;
+	.models h1 {
+		font-size: 74px;
 	}
 }
 
-@media screen and (min-width: 1440px) {
-	.hero-header h1 {
-		margin-top: -30%;
-		font-size: 67px;
+.whats-new {
+	height: 482px;
+	margin-bottom: 20%;
+}
+
+@media screen and (min-width: 768px) {
+	.whats-new {
+		height: 400px;
 	}
 }
 
 .whats-new h2 {
+	text-align: center;
 	display: flex;
 	justify-content: center;
 	font-family: futura;
 	color: #000;
 	text-transform: uppercase;
 	font-weight: bold;
-	margin-top: 10%;
+	margin-top: 23%;
 	font-size: 1.3em;
 }
 
 .whats-new .buttons {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	top: 40%;
-	margin: 0 30px;
+	position: relative;
+	top: 76%;
 }
 
-.whats-new .buttons img {
-	z-index: 9;
+@media screen and (min-width: 768px) {
+	.whats-new .buttons {
+		top: 104%;
+	}
+}
+
+@media screen and (min-width: 1380px) {
+	.whats-new .buttons {
+		top: 50%;
+	}
+}
+
+.whats-new .buttons a {
+	padding: 0 21vw;
+}
+
+@media screen and (min-width: 768px) {
+	.whats-new .buttons a {
+		padding: 0 30vw;
+	}
+}
+
+.whats-new .buttons a:first-child img {
+	left: 24vw;
+	position: absolute;
+}
+
+@media screen and (min-width: 768px) {
+	.whats-new .buttons a:first-child img {
+		left: 5vw;
+	}
+}
+
+.whats-new .buttons a:nth-child(3) img {
+	right: 0;
+	position: absolute;
 }
 
 .whats-new .slider {
@@ -284,14 +289,20 @@ header div img {
 	z-index: -2;
 }
 
-.whats-new .slider img {
-	z-index: -2;
-	padding: 40px;
+@media screen and (max-width: 767px) {
+	.whats-new .slider img:first-child, .whats-new .slider img:last-child {
+		display: none;
+	}
 }
 
-@media screen and (min-width: 768px) {
+.whats-new .slider img {
+	z-index: -2;
+	padding: 0 3%;
+}
+
+@media screen and (min-width: 1380px) {
 	.whats-new .slider img {
-		max-width: 390px;
+		padding: 0 1%;
 	}
 }
 

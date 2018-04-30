@@ -5,49 +5,27 @@
 
 * {
 	box-sizing: border-box;
+	// overflow-x: hidden;
 }
-
-
-
-.hero{
-	background-color: red;
-	position: relative;
-
-	//yellow background
-	img{
-		position: absolute;
-		top: 80px;
-		height: 70vh;
-		width: 100%;
-		z-index: -1;
-
-		@media screen and (min-width: 768px){
-			top: 100px;
-			height: 70vh;
-		}
-
-		@media screen and (min-width: 1024px){
-			height: 85vh;
-			top: 100px;
-		}
-
-		@media screen and (min-width: 1440px){
-			height: 93vh;
-			top: 120px;
-		}
-	}
-}
-
-
-
 
 
 header{
+	height: 26vw;
+	width: 100vw;
+
+	@media screen and (min-width: 768px){
+		height: 17vw;
+	}
+
+	@media screen and (min-width: 1024px){
+		height: 10vw;
+	}
 
 	nav{
 		cursor: pointer;
 
 		div{
+			// position: relative;
 
 			img{
 				position: absolute;
@@ -128,115 +106,137 @@ header{
 }
 
 
+//mobile: 437 width of mockup screen / 580 height of top yellow bottom model
 
-// 1080 width / 650 height
+// desktop: 1180 width '' / 653 height ''
 
 
 .models{
 	position: relative;
+
+	//mobile 
+	@media screen and (max-width: 767px){
+		width: 100vw;
+		height: 95vw;
+		margin: 0;
+		background-size: 178% auto;
+	}
+
 	width: 100vw;
-	height: 60vw;
-	margin: 0;
+	height: 53vw;   
 	background-image: url(../img/heroBkg.png);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-position: 0 100%;
 	text-align: center;
 
+	//models
 	img{
 		position: relative;
-		height: 90%;
-		top: 10vw;
+		height: 100%;
+		top: 8vw;
+		padding: 0 3%;
+
+		// hide 2 models on mobile
+		&:nth-child(1), &:nth-child(4){
+			@media screen and (max-width: 767px){
+				display: none;
+			}
+		}
 	}
 
+	//spring must haves
 	h1{
 		position: absolute;
-		top: 50%;
+		top: 60%;
 		text-shadow: 1px 1px 2px #000;
 		text-align: left;
 		color: #fff;
-		font-size: 54px;
+		font-size: 45px;
 		z-index: 2;
 		text-transform: uppercase;
 		font-family: futura;
 		font-weight: bold;
-	}
-}
-
-
-//spring must haves
-.hero-header{
-	display: flex;
-	flex-wrap: wrap;
-	position: relative;
-	justify-content: center;
-
-	@media screen and (min-width: 768px){
-		justify-content: flex-start;
-		margin-left: 4%;
-	}
-
-
-	h1{
-		margin-top: -68%;
-		position: absolute;
-		text-shadow: 1px 1px 2px #000;
-		text-align: left;
-		color: #fff;
-		font-size: 54px;
-		z-index: 2;
-		text-transform: uppercase;
-		font-family: futura;
-		font-weight: bold;
+		margin-left: 5%;
 
 		@media screen and (min-width: 768px){
-			margin-top: -48%;
-			font-size: 59px;
+			font-size: 50px;
 		}
 
 		@media screen and (min-width: 1024px){
-			margin-top: -40%;
 			font-size: 64px;
 		}
 
 		@media screen and (min-width: 1224px){
-			margin-top: -33%;
-			font-size: 60px;
-		}
-
-		@media screen and (min-width: 1440px){
-			margin-top: -30%;
-			font-size: 67px;
+			font-size: 74px;
 		}
 	}
-
 }
 
 
 
-.whats-new{
 
+
+
+.whats-new{
+	height: 482px;
+	margin-bottom: 20%;
+
+	@media screen and (min-width: 768px){
+		height: 400px;
+	}
 
 	h2{
+		text-align: center;
 		display: flex;
 		justify-content: center;
 		font-family: futura;
 		color: #000;
 		text-transform: uppercase;
 		font-weight: bold;
-		margin-top: 10%;
+		margin-top: 23%;
 		font-size: 1.3em;
 	}
 
+	// slider swipe buttons
 	.buttons{
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		top: 40%;
-		margin: 0 30px;
+		position: relative;
+		top: 76%;
 
-		img{
-			z-index: 9;
+		@media screen and (min-width: 768px){
+			top: 104%;
+		}
+
+		@media screen and (min-width: 1380px){
+			top: 50%;
+		}
+
+		a{
+			padding: 0 21vw;
+
+			@media screen and (min-width: 768px){
+				padding: 0 30vw;
+			}
+
+			&:first-child{
+
+				img{
+					left: 24vw;
+					position: absolute;
+
+					@media screen and (min-width: 768px){
+						left: 5vw;
+					}
+				}
+			}
+
+			&:nth-child(3){
+
+				img{
+					right: 0;
+					position: absolute;
+				}
+			}
 		}
 	}
 
@@ -247,14 +247,20 @@ header{
 		overflow: hidden;
 		z-index: -2;
 
+		@media screen and (max-width: 767px){
+			img:first-child, img:last-child{
+				display: none;
+			}
+		}
+
+
 		img{
 			z-index: -2;
-			padding: 40px;
-			
-			@media screen and (min-width: 768px){
-				max-width: 390px;
-			}
+			padding: 0 3%;
 
+			@media screen and (min-width: 1380px){
+				padding: 0 1%;
+			}
 		}
 	}
 
