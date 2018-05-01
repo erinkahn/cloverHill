@@ -363,17 +363,20 @@ header{
 
 	.at{
 		position: relative;
+		padding-bottom: 60%;
+
+		@media screen and (min-width: 768px){
+			padding-bottom: 20%;
+		}
 
 		h2{
 			text-align: center;
-			display: flex;
-			justify-content: center;
 			font-family: futura;
 			color: #000;
 			text-transform: uppercase;
 			font-weight: bold;
-			margin-top: 33%;
-			left: 57%;
+			margin-top: 14%;
+			left: 30vw;
 			font-size: 1.3em;
 			position: absolute;
 		}
@@ -390,19 +393,49 @@ header{
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-		padding-top: 60%;
+
+		@media screen and (min-width: 1024px){
+			margin: auto 25%;
+			justify-content: flex-end;
+		}
+
 
 		img{
 			margin: 1%;
 			border: 1px solid #ee1271;
+
+			@media screen and (min-width: 768px){
+				margin: 2%;
+			}
 		}
 	}
 
 }
 
 
+footer{
+	width: 100vw;
+	height: 53vw;   
+	background-image: url(/img/footer.png); //what the fuvkkkkkkk@
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: 0 100%;
+
+	.social{
+
+		img{
+
+		}
+	}
+
+	.footer-text{
+
+		a{
 
 
+		}
+	}
+}
 
 
 
