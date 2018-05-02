@@ -10,82 +10,81 @@
 
 
 header{
-	height: 26vw;
+	height: 20vw;
 	width: 100vw;
+	margin-bottom: 19%;
 
 	@media screen and (min-width: 768px){
-		height: 17vw;
+		height: 16vw;
+		margin-bottom: 2%;
 	}
 
-	@media screen and (min-width: 1024px){
-		height: 10vw;
-	}
 
 	nav{
 		cursor: pointer;
 
-		div{
-			// position: relative;
 
-			img{
-				position: absolute;
-				top: 6%;
-				left: 0;
-				margin-left: 6%;
-				max-width: 30px;
-			}
-		}
-
-		// hide nav 
 		.nav_list{
+			display: flex;
+			flex-direction: row;
 			
-			padding-top: 38%;
-			margin-left: 5%;
-			transform: rotate(16deg);
+			margin-left: 2%;
+			transform: rotate(8deg);
 
 			@media screen and (min-width: 768px){
-				padding-top: 18%;
-				margin-left: 19%;
-				transform: rotate(10deg);
+				margin-left: 5%;
 			}
 
 			@media screen and (min-width: 1024px){
-				padding-top: 14%;
-				transform: rotate(8deg);
+				padding-top: 6%;
 			}
 
 			@media screen and (min-width: 1224px){
-				padding-top: 12%;
-				transform: rotate(6deg);
+				padding-top: 7%;
+			}
+
+			@media screen and (min-width: 1440px){
+				padding-top: 9%;
 			}
 			
 
 			li{
 				font-family: futura;
-				color: #ff00ff;
-				padding: 0 20px;
+				padding: 0 18px;
+
+				@media screen and (min-width: 768px){
+					padding: 0 23px;
+				}
 
 				@media screen and (min-width: 1024px){
 					padding: 0 30px;
+					font-size: 1.1em;
+				}
+
+				@media screen and (min-width: 1224px){
+					padding: 0 33px;
+					font-size: 1.3em;
+				}
+
+				@media screen and (min-width: 1440px){
+					padding: 0 39px;
+
+				}
+
+				a{
+					z-index: 4;
+					text-decoration: none;
+					color: #000;
+					cursor: pointer;
+
+					&:hover{
+						color: #ff00ff;
+					}
 				}
 				
 			}
 		}
 
-		// show nav on click
-		.nav_open &{
-
-			.nav_list{
-				display: flex;
-
-				li{
-					flex-direction: row;
-					
-				}
-				
-				
-			}
-		}
 	}
 
 	//logo
@@ -96,6 +95,7 @@ header{
 
 		img{
 			max-width: 20%;
+
 			@media screen and (min-width: 768px){
 				padding-top: 2%;
 			}
@@ -362,7 +362,7 @@ header{
 	.at{
 		position: relative;
 		// padding-bottom: 60%;
-		border: 1px solid red;
+		// border: 1px solid red;
 
 		@media screen and (min-width: 768px){
 			padding-bottom: 20%;
@@ -403,7 +403,8 @@ header{
 			margin: 1%;
 			border: 1px solid #ee1271;
 			width: 28%;
-			height: auto;
+			// height: 28%;
+			align-self: center;
 
 			@media screen and (min-width: 768px){
 				margin: 2%;

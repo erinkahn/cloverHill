@@ -57,19 +57,15 @@ table {
 }
 
 header {
-	height: 26vw;
+	height: 20vw;
 	width: 100vw;
+	margin-bottom: 19%;
 }
 
 @media screen and (min-width: 768px) {
 	header {
-		height: 17vw;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	header {
-		height: 10vw;
+		height: 16vw;
+		margin-bottom: 2%;
 	}
 }
 
@@ -77,60 +73,77 @@ header nav {
 	cursor: pointer;
 }
 
-header nav div img {
-	position: absolute;
-	top: 6%;
-	left: 0;
-	margin-left: 6%;
-	max-width: 30px;
-}
-
 header nav .nav_list {
-	padding-top: 38%;
-	margin-left: 5%;
-	transform: rotate(16deg);
+	display: flex;
+	flex-direction: row;
+	margin-left: 2%;
+	transform: rotate(8deg);
 }
 
 @media screen and (min-width: 768px) {
 	header nav .nav_list {
-		padding-top: 18%;
-		margin-left: 19%;
-		transform: rotate(10deg);
+		margin-left: 5%;
 	}
 }
 
 @media screen and (min-width: 1024px) {
 	header nav .nav_list {
-		padding-top: 14%;
-		transform: rotate(8deg);
+		padding-top: 6%;
 	}
 }
 
 @media screen and (min-width: 1224px) {
 	header nav .nav_list {
-		padding-top: 12%;
-		transform: rotate(6deg);
+		padding-top: 7%;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	header nav .nav_list {
+		padding-top: 9%;
 	}
 }
 
 header nav .nav_list li {
 	font-family: futura;
-	color: #ff00ff;
-	padding: 0 20px;
+	padding: 0 18px;
+}
+
+@media screen and (min-width: 768px) {
+	header nav .nav_list li {
+		padding: 0 23px;
+	}
 }
 
 @media screen and (min-width: 1024px) {
 	header nav .nav_list li {
 		padding: 0 30px;
+		font-size: 1.1em;
 	}
 }
 
-.nav_open header nav .nav_list {
-	display: flex;
+@media screen and (min-width: 1224px) {
+	header nav .nav_list li {
+		padding: 0 33px;
+		font-size: 1.3em;
+	}
 }
 
-.nav_open header nav .nav_list li {
-	flex-direction: row;
+@media screen and (min-width: 1440px) {
+	header nav .nav_list li {
+		padding: 0 39px;
+	}
+}
+
+header nav .nav_list li a {
+	z-index: 4;
+	text-decoration: none;
+	color: #000;
+	cursor: pointer;
+}
+
+header nav .nav_list li a:hover {
+	color: #ff00ff;
 }
 
 header div {
@@ -397,7 +410,6 @@ header div img {
 
 .gram-section .at {
 	position: relative;
-	border: 1px solid red;
 }
 
 @media screen and (min-width: 768px) {
@@ -440,7 +452,7 @@ header div img {
 	margin: 1%;
 	border: 1px solid #ee1271;
 	width: 28%;
-	height: auto;
+	align-self: center;
 }
 
 @media screen and (min-width: 768px) {
