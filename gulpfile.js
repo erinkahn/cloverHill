@@ -13,6 +13,9 @@ const gulp = require('gulp'),
 	colors = require('colors'),
 	plumber = require('gulp-plumber'),
 	gulpFn  = require('gulp-fn'),
+	axios = require('axios'),
+	fs = require('fs'),
+	util = require('util'),
 	browserSync = require('browser-sync').create()
 
 
@@ -150,6 +153,33 @@ gulp.task('start-browsersync', function() {
 })
 
 
+
+gulp.task('version', () => {
+	// pay no attention to the man behind the curtain.
+	fs.readFile('package.json', 'utf8', function (err, data) {
+		if (err) {
+			console.warn(`Where's package.json?!?!?!`.red.bold.inverse);
+			return false;
+		}
+		let parsedPackage = JSON.parse(data);	
+		let packagefileURL = 'https://raw.githubusercontent.com/CreativeCircus/circus-starter/master/package.json';
+		axios.get(packagefileURL, {responseType: 'json'})
+			.then(response => {
+				if (parsedPackage.version == response.data.version) {
+					console.log(`Template appears to be up to date.`)
+				} else {
+					console.warn(`Local version is ${parsedPackage.version}.`.red.bold)	
+					console.warn(`Remote version is ${response.data.version}.`.red.bold)	
+					console.warn(`Circus Starter template appears to be out of date.`.red.bold.inverse)				
+					console.warn(`If this is a new project, get a new copy. If it's an old project, consider updating for new gulpy goodness.`.red.bold.inverse)				
+				}
+			})
+			.catch(error => {
+				console.log(`Couldn't fetch circus-starter mod date`, error);
+			});
+	});
+})
+
 // running `gulp` runs this task. this task sort of branches off into the others as needed
 gulp.task('default', [
 	'welcome', 
@@ -160,7 +190,8 @@ gulp.task('default', [
 	'js-check', 
 	'js-compile', 
 	'sass-compile', 
-	'make-cool-shit'
+	'make-cool-shit',
+	'version'
 ]);
 
 gulp.task('no-browser-sync', [
@@ -171,5 +202,8 @@ gulp.task('no-browser-sync', [
 	'js-check', 
 	'js-compile', 
 	'sass-compile', 
-	'make-cool-shit'
+	'make-cool-shit',
+	'version'
 ]);
+
+
