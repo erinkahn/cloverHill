@@ -188,9 +188,19 @@ header div img {
 	padding: 0 3%;
 }
 
-@media screen and (max-width: 767px) {
-	.models img:nth-child(1), .models img:nth-child(4) {
-		display: none;
+.models img:nth-child(1), .models img:nth-child(4) {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.models img:nth-child(1) {
+		display: inline-block;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.models img:nth-child(4) {
+		display: inline-block;
 	}
 }
 
@@ -328,7 +338,6 @@ header div img {
 	position: relative;
 	width: 100%;
 	/* 400 px wide / 400 */
-	padding-bottom: 240%;
 }
 
 @media screen and (min-width: 768px) {
@@ -366,7 +375,6 @@ header div img {
 }
 
 .grid-images {
-	float: left;
 	width: 100vw;
 	max-width: 802px;
 }
@@ -496,13 +504,45 @@ header div img {
 	}
 }
 
+@media screen and (min-width: 1024px) {
+	.gram-section {
+		padding-bottom: 10%;
+	}
+}
+
 .gram-section .at {
 	position: relative;
+	padding-bottom: 50%;
+	margin-top: 24%;
 }
 
 @media screen and (min-width: 768px) {
 	.gram-section .at {
-		padding-bottom: 20%;
+		margin-top: 17%;
+		padding-bottom: 12%;
+		margin-left: 6%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.gram-section .at {
+		margin-top: 20%;
+		padding-bottom: 0%;
+		margin-left: 16%;
+	}
+}
+
+@media screen and (min-width: 1224px) {
+	.gram-section .at {
+		margin-top: 4%;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.gram-section .at {
+		margin-top: 2%;
+		margin-left: 18%;
+		padding-bottom: 9%;
 	}
 }
 
@@ -523,20 +563,100 @@ header div img {
 	margin-left: 10%;
 }
 
-.gram-section .gram-images {
+.gram-section span {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+@media screen and (min-width: 768px) {
+	.gram-section span {
+		flex-direction: row;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.gram-section span .social {
+		margin: 12% 6% 0 7%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.gram-section span .social {
+		margin: 19% 0 0 10%;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.gram-section span .social {
+		margin: 6% 0 0 13%;
+	}
+}
+
+.gram-section span .social img {
+	padding: 10% 1% 9% 3%;
+	width: 29%;
+	margin-left: 1%;
+}
+
+@media screen and (max-width: 767px) {
+	.gram-section span .social img {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.gram-section span .social img:nth-child(2) {
+		margin-left: 41%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.gram-section span .social img {
+		padding: 9% 1% 9% 4%;
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.gram-section span .social img {
+		padding: 16% 1% 1% 9%;
+	}
+}
+
+@media screen and (min-width: 1224px) {
+	.gram-section span .social img {
+		padding: 6% 1% 8% 18%;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.gram-section span .social img {
+		padding: 8% 0% 12% 5%;
+		width: 45%;
+	}
+}
+
+.gram-section span .gram-images {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 }
 
-@media screen and (min-width: 1024px) {
-	.gram-section .gram-images {
-		margin: auto 25%;
+@media screen and (min-width: 768px) {
+	.gram-section span .gram-images {
+		margin: auto 8% 0 1%;
 		justify-content: flex-end;
 	}
 }
 
-.gram-section .gram-images img {
+@media screen and (min-width: 1024px) {
+	.gram-section span .gram-images {
+		margin: auto 10% 0 2%;
+	}
+}
+
+.gram-section span .gram-images img {
 	margin: 1%;
 	border: 1px solid #ee1271;
 	width: 28%;
@@ -544,7 +664,7 @@ header div img {
 }
 
 @media screen and (min-width: 768px) {
-	.gram-section .gram-images img {
+	.gram-section span .gram-images img {
 		margin: 2%;
 	}
 }
