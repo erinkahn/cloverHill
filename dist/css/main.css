@@ -734,7 +734,7 @@ header div img {
 }
 
 .gram-section span .gram-images img:hover {
-	transform: scale(2);
+	transform: scale(1.2);
 	transition: 1s ease;
 }
 
