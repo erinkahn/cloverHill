@@ -559,24 +559,28 @@ footer {
 }
 
 footer .footer-text {
-	padding: 0 10%;
+	margin-left: 10%;
 }
 
 footer .footer-text a {
 	padding-top: 36px;
-	float: left;
 	display: inline-block;
-	padding-right: 12%;
+	padding-right: 9%;
 	text-decoration: none;
 	color: #000;
 	font-family: futura;
 	font-weight: bold;
 }
 
+footer .footer-text a:last-child {
+	padding-right: 0%;
+}
+
 @media screen and (min-width: 1024px) {
 	footer .footer-text a {
 		padding-right: 5%;
 		font-size: 1.2em;
+		display: inline-block;
 	}
 }
 

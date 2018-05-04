@@ -509,21 +509,26 @@ footer{
 	height: 90px; 
 
 	.footer-text{
-		padding: 0 10%;
+		margin-left: 10%;
 
 		a{
 			padding-top: 36px;
-			float: left;
+			// float: left;
 			display: inline-block; // sit next to each other in a row
-			padding-right: 12%;
+			padding-right: 9%;
 			text-decoration: none;
 			color: #000;
 			font-family: futura;
 			font-weight: bold;
 
+			&:last-child{
+				padding-right: 0%;
+			}
+
 			@media screen and (min-width: 1024px){
 				padding-right: 5%;
 				font-size: 1.2em;
+				display: inline-block; // sit next to each other in a row
 			}
 		}
 	}
