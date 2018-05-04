@@ -390,6 +390,7 @@ header div img {
 }
 
 .grid-images .a {
+	cursor: pointer;
 	max-width: 29.75%;
 	min-width: 400px;
 	float: left;
@@ -485,6 +486,7 @@ header div img {
 }
 
 .grid-images .b {
+	cursor: pointer;
 	float: left;
 	width: 402px;
 }
@@ -644,6 +646,7 @@ header div img {
 }
 
 .gram-section span .social img {
+	cursor: pointer;
 	padding: 10% 1% 9% 3%;
 	width: 29%;
 	margin-left: 1%;
@@ -721,6 +724,7 @@ header div img {
 	border: 1px solid #ee1271;
 	width: 28%;
 	align-self: center;
+	cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -732,6 +736,13 @@ header div img {
 .gram-section span .gram-images img:hover {
 	transform: scale(2);
 	transition: 1s ease;
+}
+
+@media screen and (min-width: 1224px) {
+	.gram-section span .gram-images img:hover {
+		transform: scale(1.4);
+		transition: 1s ease;
+	}
 }
 
 footer {
