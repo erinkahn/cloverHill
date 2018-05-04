@@ -369,11 +369,21 @@ header{
 			height: 426px;
 			position: relative;
 
+			&:hover{
+				background: rgba(247, 70, 70, 0.7);
+				transition: 2s linear;
+			}
+
 			h3{
 				position: absolute;
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
+
+				&:hover{
+					transform: scale(1.2);
+					transition: 2s ease-in-out;
+				}
 			}
 		}
 
@@ -391,11 +401,21 @@ header{
 				width: 200px;
 				position: relative;
 
+				&:hover{
+					background: rgba(247, 70, 70, 0.7);
+					transition: 2s linear;
+				}
+
 				h3{
 					position: absolute;
 					top: 50%;
 					left: 50%;
 					transform: translate(-50%, -50%);
+
+					&:hover{
+						transform: scale(1.2);
+						transition: 2s ease-in-out;
+					}
 				}
 
 			}
@@ -409,11 +429,21 @@ header{
 				width: 200px;
 				position: relative;
 
+				&:hover{
+					background: rgba(247, 70, 70, 0.7);
+					transition: 2s linear;
+				}
+
 				h3{
 					position: absolute;
 					top: 50%;
 					left: 50%;
 					transform: translate(-50%, -50%);
+
+					&:hover{
+						transform: scale(1.2);
+						transition: 2s ease-in-out;
+					}
 				}
 			}
 		}
@@ -433,11 +463,21 @@ header{
 			width: 400px;
 			position: relative;
 
+			&:hover{
+				background: rgba(247, 70, 70, 0.7);
+				transition: 2s linear;
+			}
+
 			h3{
 				position: absolute;
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
+
+				&:hover{
+					transform: scale(2);
+					transition: 2s ease-in-out;
+				}
 			}
 		}
 
@@ -451,11 +491,21 @@ header{
 			width: 400px;
 			position: relative;
 
+			&:hover{
+				background: rgba(247, 70, 70, 0.7);
+				transition: 2s linear;
+			}
+
 			h3{
 				position: absolute;
 				top: 50%;
 				left: 50%;
 				transform: translate(-50%, -50%);
+
+				&:hover{
+					transform: scale(2);
+					transition: 2s ease-in-out;
+				}
 			}
 		}
 	}
@@ -578,6 +628,20 @@ header{
 					padding: 8% 0% 12% 5%;
 					width: 45%;
 				}
+
+				&:first-child, &:last-child{
+					&:hover{
+						transform: rotate(45deg);
+						transition: .4s ease;
+					}
+				}
+
+				&:nth-child(2){
+					&:hover{
+						transform: rotate(-45deg);
+						transition: .4s ease;
+					}
+				}
 			}
 		}
 
@@ -604,6 +668,11 @@ header{
 	
 				@media screen and (min-width: 768px){
 					margin: 2%;
+				}
+
+				&:hover{
+					transform: scale(2);
+					transition: 1s ease;
 				}
 			}
 		}
@@ -643,6 +712,10 @@ footer{
 				padding-right: 5%;
 				font-size: 1.2em;
 				display: inline-block; // sit next to each other in a row
+			}
+
+			&:hover{
+				color: #fff;
 			}
 		}
 	}
