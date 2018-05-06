@@ -142,7 +142,7 @@ header nav .nav_list li a {
 }
 
 header nav .nav_list li a:hover {
-	color: #ff00ff;
+	color: #f69679;
 }
 
 header div {
@@ -424,16 +424,16 @@ header div img {
 	transition: 2s linear;
 }
 
+.grid-images .a .onSale:hover h3 {
+	transform: translate(-40px, 0px) scale(1.8);
+	transition: 1s ease-in-out;
+}
+
 .grid-images .a .onSale h3 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-.grid-images .a .onSale h3:hover {
-	transform: scale(1.2);
-	transition: 2s ease-in-out;
 }
 
 .grid-images .a .a2 {
@@ -458,16 +458,16 @@ header div img {
 	transition: 2s linear;
 }
 
+.grid-images .a .a2 .backpacks:hover h3 {
+	transform: translate(-50px, 0px) scale(1.8);
+	transition: 1s ease-in-out;
+}
+
 .grid-images .a .a2 .backpacks h3 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-.grid-images .a .a2 .backpacks h3:hover {
-	transform: scale(1.2);
-	transition: 2s ease-in-out;
 }
 
 .grid-images .a .a2 .overalls {
@@ -487,16 +487,16 @@ header div img {
 	transition: 2s linear;
 }
 
+.grid-images .a .a2 .overalls:hover h3 {
+	transform: translate(-45px, 0px) scale(1.8);
+	transition: 1s ease-in-out;
+}
+
 .grid-images .a .a2 .overalls h3 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-.grid-images .a .a2 .overalls h3:hover {
-	transform: scale(1.2);
-	transition: 2s ease-in-out;
 }
 
 .grid-images .b {
@@ -528,16 +528,16 @@ header div img {
 	transition: 2s linear;
 }
 
+.grid-images .b .bestSellers:hover h3 {
+	transform: translate(-60px, 0px) scale(1.8);
+	transition: 1s ease-in-out;
+}
+
 .grid-images .b .bestSellers h3 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-.grid-images .b .bestSellers h3:hover {
-	transform: scale(2);
-	transition: 2s ease-in-out;
 }
 
 .grid-images .b .summer18 {
@@ -557,16 +557,16 @@ header div img {
 	transition: 2s linear;
 }
 
+.grid-images .b .summer18:hover h3 {
+	transform: translate(-60px, 0px) scale(1.8);
+	transition: 1s ease-in-out;
+}
+
 .grid-images .b .summer18 h3 {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-.grid-images .b .summer18 h3:hover {
-	transform: scale(2);
-	transition: 2s ease-in-out;
 }
 
 .gram-section {
@@ -635,6 +635,7 @@ header div img {
 }
 
 .gram-section .at img {
+	z-index: -2;
 	position: absolute;
 	margin-left: 10%;
 }
@@ -745,7 +746,7 @@ header div img {
 
 .gram-section span .gram-images img {
 	margin: 1%;
-	border: 1px solid #ee1271;
+	border: 1px solid #79f6e9;
 	width: 28%;
 	align-self: center;
 	cursor: pointer;
