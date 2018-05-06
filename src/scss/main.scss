@@ -5,29 +5,27 @@
 
 * {
 	box-sizing: border-box;
-	// overflow-x: hidden;
 }
 
 
 header{
 	height: 20vw;
 	width: 100vw;
-	margin-bottom: 19%;
+	margin-bottom: 22%;
 
 	@media screen and (min-width: 768px){
 		height: 16vw;
-		margin-bottom: 2%;
+		margin-bottom: 4%;
 	}
 
 
 	nav{
 		cursor: pointer;
 
-
 		.nav_list{
 			display: flex;
 			flex-direction: row;
-
+			
 			transform: rotate(7deg);
 
 			@media screen and (min-width: 768px){
@@ -48,6 +46,7 @@ header{
 			
 
 			li{
+				cursor: pointer;
 				font-family: futura;
 				padding: 0 18px;
 
@@ -71,6 +70,7 @@ header{
 				}
 
 				a{
+					cursor: pointer;
 					z-index: 4;
 					text-decoration: none;
 					color: #000;
@@ -115,7 +115,7 @@ header{
 	//mobile 
 	@media screen and (max-width: 767px){
 		width: 100vw;
-		height: 99vw;
+		height: 100vw;
 		margin: 0;
 		background-size: 178% auto;
 	}
@@ -212,6 +212,22 @@ header{
 		font-weight: bold;
 		margin-top: 23%;
 		font-size: 1.3em;
+
+		@media screen and (min-width: 768px){
+			font-size: 1.5em;
+		}
+
+		@media screen and (min-width: 1024px){
+			font-size: 1.8em;
+		}
+
+		@media screen and (min-width: 1224px){
+			font-size: 1.9em;
+		}
+
+		@media screen and (min-width: 1440px){
+			font-size: 2em;
+		}
 	}
 
 	// slider swipe buttons
@@ -297,9 +313,9 @@ header{
 	}
 	
 	//yellow triangle left
-	&:before{
-		position: absolute;
-		background-image: url(../img/yellowTriangleLeft.png);
+	&::before{
+		// position: absolute;
+		background-image: url(../img/triangleLeft.png);
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: cover;
@@ -309,14 +325,14 @@ header{
 	}
 
 	//yellow triangle right
-	&:after{
-		position: absolute;
-		background-image: url(../img/yellowTriangleRight.png);
+	&::after{
+		// position: absolute;
+		background-image: url(../img/triangleRight.png);
 		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		height: 80px;
-		width: 81px;
+		background-position: 100% auto;
+		background-size: auto 100%;
+		// height: 80px;
+		// width: 81px;
 		z-index: 4;
 	}
 
@@ -364,7 +380,7 @@ header{
 			position: relative;
 
 			&:hover{
-				background: rgba(247, 70, 70, 0.7);
+				background: rgba(246, 150, 121, 0.8);
 				transition: 2s linear;
 
 				h3{
@@ -397,11 +413,11 @@ header{
 				position: relative;
 
 				&:hover{
-					background: rgba(247, 70, 70, 0.7);
+					background: rgba(189, 209, 170, 0.8);
 					transition: 2s linear;
 
 					h3{
-						transform: translate(-50px,0px) scale(1.8);
+						transform: translate(-53px,0px) scale(1.5);
 						transition: 1s ease-in-out;
 					}
 				}
@@ -426,7 +442,7 @@ header{
 				position: relative;
 
 				&:hover{
-					background: rgba(247, 70, 70, 0.7);
+					background: rgba(135, 153, 156, 0.8);
 					transition: 2s linear;
 
 					h3{
@@ -467,7 +483,7 @@ header{
 			position: relative;
 
 			&:hover{
-				background: rgba(247, 70, 70, 0.7);
+				background: rgba(230, 122, 57, 0.8);
 				transition: 2s linear;
 
 				h3{
@@ -497,7 +513,7 @@ header{
 			position: relative;
 
 			&:hover{
-				background: rgba(247, 70, 70, 0.7);
+				background: rgba(245, 209, 112, 0.8);
 				transition: 2s linear;
 
 				h3{
@@ -547,18 +563,19 @@ header{
 		
 		@media screen and (min-width: 1024px){
 			margin-top: 20%;
-			padding-bottom: 0%;
+			padding-bottom: 4%;
 			margin-left: 16%;
 		}	
 
 		@media screen and (min-width: 1224px){
 			margin-top: 4%;
+			padding-bottom: 2%;
 		}
 
 		@media screen and (min-width: 1440px){
-			margin-top: 2%;
-			margin-left: 18%;
-			padding-bottom: 9%;
+			margin-top: 1%;
+			margin-left: 15%;
+			padding-bottom: 10%;
 		}
 
 		h2{
@@ -567,10 +584,34 @@ header{
 			color: #000;
 			text-transform: uppercase;
 			font-weight: bold;
-			margin-top: 14%;
-			left: 30vw;
+			margin-top: 30%;
+			left: 39vw;
 			font-size: 1.3em;
 			position: absolute;
+
+			@media screen and (min-width: 768px){
+				margin-top: 17%;
+				left: 40vw;
+				font-size: 1.5em;
+			}
+
+			@media screen and (min-width: 1024px){
+				margin-top: 13%;
+				left: 30vw;
+				font-size: 1.8em;
+			}
+
+			@media screen and (min-width: 1224px){
+				margin-top: 12%;
+				left: 27vw;
+				font-size: 1.9em;
+			}
+
+			@media screen and (min-width: 1440px){
+				margin-top: 8%;
+				left: 23vw;
+				font-size: 2em;
+			}
 		}
 
 		img{
