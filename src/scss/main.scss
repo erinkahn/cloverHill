@@ -220,11 +220,11 @@ header{
 		top: 76%;
 
 		@media screen and (min-width: 768px){
-			top: 104%;
+			top: 85%;
 		}
 
 		@media screen and (min-width: 1380px){
-			top: 50%;
+			top: 35%;
 		}
 
 		a{
@@ -241,7 +241,7 @@ header{
 					position: absolute;
 
 					@media screen and (min-width: 768px){
-						left: 5vw;
+						left: 7vw;
 					}
 				}
 			}
@@ -272,10 +272,10 @@ header{
 
 		img{
 			z-index: -2;
-			padding: 0 3%;
+			padding: 0 2%;
 
 			@media screen and (min-width: 1380px){
-				padding: 0 1%;
+				padding: 0 4%;
 			}
 		}
 	}
