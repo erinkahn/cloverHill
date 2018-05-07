@@ -298,8 +298,6 @@ header{
 
 }
 
-
-
 .image-grid{
 	position: relative;
 	width: 100%;
@@ -312,30 +310,43 @@ header{
 		padding-bottom: 60%;
 	}
 	
-	//yellow triangle left
-	&::before{
-		// position: absolute;
-		background-image: url(../img/triangleLeft.png);
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		height: 80px;
-		width: 81px;
-		z-index: 4;
-	}
+	@media screen and (min-width: 768px){
+		//triangle left
+		&::before{
+			content: ''; // you need this
+			position: absolute;
+			background-image: url('../img/triangleLeft.png');
+			background-repeat: no-repeat;
+			background-position: 100% auto;
+			background-size: 100%;
+			height: 120px;
+			width: 127px; 
+			top: -3%;
+			left: 7%; // 143 / 1024
+			z-index: 4;
+		}
 
-	//yellow triangle right
-	&::after{
-		// position: absolute;
-		background-image: url(../img/triangleRight.png);
-		background-repeat: no-repeat;
-		background-position: 100% auto;
-		background-size: auto 100%;
-		// height: 80px;
-		// width: 81px;
-		z-index: 4;
-	}
+		//triangle right
+		&::after{
+			content: ''; // you need this
+			position: absolute;
+			background-image: url('../img/triangleRight.png');
+			background-repeat: no-repeat;
+			background-position: 100% auto;
+			background-size: 100%;
+			height: 120px;
+			right: 7%;
+			bottom: -20%;
+			width: 127px;
+			z-index: 4;
 
+			@media screen and (min-width: 1024px){
+				bottom: 23%;
+			}
+		}
+
+	}
+	
 }
 
 
