@@ -9,36 +9,3 @@ to verify that you're working in the right files.`)
 // })
 
 
-
-
-
-
-
-// let imageSlides = document.querySelectorAll('.slider img');
-// let currentSlide = 0;
-
-// var loopThroughImages = function() {
-//     for(var i=0; i< imageSlides.length; i++) {
-//         console.log('imageSlides[i]');
-//     }
-// }
-
-// // whne you click the left hand go left --
-// document.querySelector('.swipel').addEventListener('click', function() {
-//     currentSlide--;
-//     loopThroughImages();
-//     if (currentSlide == -1) {
-//         currentSlide = imageSlides.length - 1;
-//     }
-
-// });
-
-// // whne you click the right hand go left --
-// document.querySelector('.swiper').addEventListener('click', function() {
-//     currentSlide++;
-//     loopThroughImages();
-//     if (currentSlide == imageSlides.length) {
-//         currentSlide = 0;
-//     }
-
-// });

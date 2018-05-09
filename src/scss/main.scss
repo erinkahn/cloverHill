@@ -188,15 +188,13 @@ header{
 
 
 
-
+// slider -----------------------------------------
 
 
 .whats-new{
-	height: 482px;
-	margin-bottom: 30%;
+	margin-bottom: 40%;
 
 	@media screen and (min-width: 768px){
-		height: 400px;
 		margin-bottom: 25%;
 	}
 
@@ -211,7 +209,6 @@ header{
 		font-family: futura;
 		color: #000;
 		text-transform: uppercase;
-		// font-weight: bold;
 		margin-top: 23%;
 		font-size: 1.3em;
 
@@ -232,73 +229,77 @@ header{
 		}
 	}
 
-	// slider swipe buttons
-	.buttons{
-		position: relative;
-		top: 76%;
-
-		@media screen and (min-width: 768px){
-			top: 85%;
-		}
-
-		@media screen and (min-width: 1380px){
-			top: 35%;
-		}
-
-		a{
-			padding: 0 21vw;
-
-			@media screen and (min-width: 768px){
-				padding: 0 30vw;
-			}
-
-			&:first-child{
-
-				img{
-					left: 24vw;
-					position: absolute;
-
-					@media screen and (min-width: 768px){
-						left: 7vw;
-					}
-				}
-			}
-
-			&:nth-child(3){
-
-				img{
-					right: 0;
-					position: absolute;
-				}
-			}
-		}
-	}
 
 	.slider{
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		overflow: hidden;
-		z-index: -2;
-
-		@media screen and (max-width: 767px){
-			img:first-child, img:last-child{
-				display: none;
-			}
-		}
+		margin: 42px auto;
 
 
-		img{
-			z-index: -2;
-			padding: 0 2%;
-
-			@media screen and (min-width: 1380px){
-				padding: 0 4%;
-			}
-		}
+		div{
+			width: 57%;
+		}	
+		
 	}
 
 }
+
+// .slick-slide img {
+// 	min-width: calc(100% - 100px);
+// 	margin: 0 0px;
+//   }
+
+.slick-prev.slick-arrow{
+	position: relative;
+}
+
+//next button
+button.slick-next.slick-arrow{
+	position: absolute;
+	right: 30%;
+	top: 110%;
+
+	&::before{
+		font-size: 30px;
+		background-image: url(../img/rightSwipe.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		color: transparent;
+	}
+}
+
+//previous button
+button.slick-prev.slick-arrow{
+	position: absolute;
+	top: 110%;
+	left: 30%;
+
+	&::before{
+		font-size: 30px;
+		background-image: url(../img/leftSwipe.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		color: transparent;
+	}
+}
+
+.slick-prev, .slick-next{
+	height: 56px;
+	// font-size: 20px;
+	transform: translate(0, 0);
+}
+
+// .slick-prev{
+// 	z-index: 9999;
+// }
+
+// slider ends -----------------------------------------
+
+
+
+
+
 
 .image-grid{
 	position: relative;
@@ -652,6 +653,8 @@ header{
 		}
 
 		.social{
+			margin: 30px auto;
+
 			@media screen and (min-width: 768px){
 				margin: 12% 6% 0 7%;
 			}
@@ -671,7 +674,22 @@ header{
 				margin-left: 1%;
 
 				@media screen and (max-width: 767px){
-					display: none;
+					position: absolute;
+					width: 20%;
+
+					&:first-child{
+						bottom: 0%;
+						left: 3%;
+						
+					}
+					&:nth-child(2){
+						bottom: 0%;
+						left: 37%;
+					}
+					&:last-child{
+						bottom: 0%;
+						right: 8%;
+					}
 				}
 
 				&:nth-child(2){

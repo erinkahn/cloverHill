@@ -241,13 +241,11 @@ header div img {
 }
 
 .whats-new {
-	height: 482px;
-	margin-bottom: 30%;
+	margin-bottom: 40%;
 }
 
 @media screen and (min-width: 768px) {
 	.whats-new {
-		height: 400px;
 		margin-bottom: 25%;
 	}
 }
@@ -293,72 +291,52 @@ header div img {
 	}
 }
 
-.whats-new .buttons {
-	position: relative;
-	top: 76%;
-}
-
-@media screen and (min-width: 768px) {
-	.whats-new .buttons {
-		top: 85%;
-	}
-}
-
-@media screen and (min-width: 1380px) {
-	.whats-new .buttons {
-		top: 35%;
-	}
-}
-
-.whats-new .buttons a {
-	padding: 0 21vw;
-}
-
-@media screen and (min-width: 768px) {
-	.whats-new .buttons a {
-		padding: 0 30vw;
-	}
-}
-
-.whats-new .buttons a:first-child img {
-	left: 24vw;
-	position: absolute;
-}
-
-@media screen and (min-width: 768px) {
-	.whats-new .buttons a:first-child img {
-		left: 7vw;
-	}
-}
-
-.whats-new .buttons a:nth-child(3) img {
-	right: 0;
-	position: absolute;
-}
-
 .whats-new .slider {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	overflow: hidden;
-	z-index: -2;
+	margin: 42px auto;
 }
 
-@media screen and (max-width: 767px) {
-	.whats-new .slider img:first-child, .whats-new .slider img:last-child {
-		display: none;
-	}
+.whats-new .slider div {
+	width: 57%;
 }
 
-.whats-new .slider img {
-	z-index: -2;
-	padding: 0 2%;
+.slick-prev.slick-arrow {
+	position: relative;
 }
 
-@media screen and (min-width: 1380px) {
-	.whats-new .slider img {
-		padding: 0 4%;
-	}
+button.slick-next.slick-arrow {
+	position: absolute;
+	right: 30%;
+	top: 110%;
+}
+
+button.slick-next.slick-arrow::before {
+	font-size: 30px;
+	background-image: url(../img/rightSwipe.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	color: transparent;
+}
+
+button.slick-prev.slick-arrow {
+	position: absolute;
+	top: 110%;
+	left: 30%;
+}
+
+button.slick-prev.slick-arrow::before {
+	font-size: 30px;
+	background-image: url(../img/leftSwipe.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	color: transparent;
+}
+
+.slick-prev, .slick-next {
+	height: 56px;
+	transform: translate(0, 0);
 }
 
 .image-grid {
@@ -714,6 +692,10 @@ header div img {
 	}
 }
 
+.gram-section span .social {
+	margin: 30px auto;
+}
+
 @media screen and (min-width: 768px) {
 	.gram-section span .social {
 		margin: 12% 6% 0 7%;
@@ -741,7 +723,20 @@ header div img {
 
 @media screen and (max-width: 767px) {
 	.gram-section span .social img {
-		display: none;
+		position: absolute;
+		width: 20%;
+	}
+	.gram-section span .social img:first-child {
+		bottom: 0%;
+		left: 3%;
+	}
+	.gram-section span .social img:nth-child(2) {
+		bottom: 0%;
+		left: 37%;
+	}
+	.gram-section span .social img:last-child {
+		bottom: 0%;
+		right: 8%;
 	}
 }
 
