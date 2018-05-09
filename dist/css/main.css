@@ -57,6 +57,8 @@ table {
 }
 
 header {
+	position: relative;
+	z-index: 10;
 	height: 20vw;
 	width: 100vw;
 	margin-bottom: 22%;
@@ -263,7 +265,6 @@ header div img {
 	font-family: futura;
 	color: #000;
 	text-transform: uppercase;
-	font-weight: bold;
 	margin-top: 23%;
 	font-size: 1.3em;
 }
@@ -458,21 +459,19 @@ header div img {
 	position: relative;
 }
 
-.grid-images .a .onSale:hover {
-	background: rgba(246, 150, 121, 0.8);
-	transition: 2s linear;
-}
-
 .grid-images .a .onSale:hover h3 {
-	transform: translate(-40px, 0px) scale(1.8);
+	font-size: 1.5em;
+	background-color: rgba(246, 150, 121, 0.8);
 	transition: 1s ease-in-out;
 }
 
 .grid-images .a .onSale h3 {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
 }
 
 .grid-images .a .a2 {
@@ -492,21 +491,19 @@ header div img {
 	position: relative;
 }
 
-.grid-images .a .a2 .backpacks:hover {
-	background: rgba(189, 209, 170, 0.8);
-	transition: 2s linear;
-}
-
 .grid-images .a .a2 .backpacks:hover h3 {
-	transform: translate(-53px, 0px) scale(1.5);
+	font-size: 1.5em;
+	background-color: rgba(189, 209, 170, 0.8);
 	transition: 1s ease-in-out;
 }
 
 .grid-images .a .a2 .backpacks h3 {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
 }
 
 .grid-images .a .a2 .overalls {
@@ -521,21 +518,19 @@ header div img {
 	position: relative;
 }
 
-.grid-images .a .a2 .overalls:hover {
-	background: rgba(135, 153, 156, 0.8);
-	transition: 2s linear;
-}
-
 .grid-images .a .a2 .overalls:hover h3 {
-	transform: translate(-45px, 0px) scale(1.8);
 	transition: 1s ease-in-out;
+	background-color: rgba(135, 153, 156, 0.8);
+	font-size: 1.5em;
 }
 
 .grid-images .a .a2 .overalls h3 {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
 }
 
 .grid-images .b {
@@ -562,21 +557,19 @@ header div img {
 	position: relative;
 }
 
-.grid-images .b .bestSellers:hover {
-	background: rgba(230, 122, 57, 0.8);
-	transition: 2s linear;
-}
-
 .grid-images .b .bestSellers:hover h3 {
-	transform: translate(-60px, 0px) scale(1.8);
 	transition: 1s ease-in-out;
+	background-color: rgba(244, 214, 204, 0.8);
+	font-size: 1.5em;
 }
 
 .grid-images .b .bestSellers h3 {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
 }
 
 .grid-images .b .summer18 {
@@ -591,21 +584,19 @@ header div img {
 	position: relative;
 }
 
-.grid-images .b .summer18:hover {
-	background: rgba(245, 209, 112, 0.8);
-	transition: 2s linear;
-}
-
 .grid-images .b .summer18:hover h3 {
-	transform: translate(-60px, 0px) scale(1.8);
 	transition: 1s ease-in-out;
+	background: rgba(245, 209, 112, 0.8);
+	font-size: 1.5em;
 }
 
 .grid-images .b .summer18 h3 {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
 }
 
 .gram-section {
@@ -667,7 +658,6 @@ header div img {
 	font-family: futura;
 	color: #000;
 	text-transform: uppercase;
-	font-weight: bold;
 	margin-top: 30%;
 	left: 39vw;
 	font-size: 1.3em;
