@@ -150,9 +150,9 @@ header{
 		}
 		
 
-		// hide last model til 889
+		// hide last model til 1512
 		&:nth-child(4){
-			@media screen and (min-width: 900px){
+			@media screen and (min-width: 1513px){
 				display: inline-block;
 			}
 		}
