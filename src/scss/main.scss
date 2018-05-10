@@ -1,7 +1,11 @@
 
 @import 'reset';
+@import "men";
+@import "women";
 
 
+
+ 
 
 * {
 	box-sizing: border-box;
@@ -90,18 +94,24 @@ header{
 
 	//logo
 	div{
-		display: flex;
-		justify-content: flex-end;
-		margin-right: 8%;
+		
 
-		img{
-			// cursor: pointer;
-			max-width: 20%;
+		a{
+			cursor: pointer;
+			display: flex;
+			justify-content: flex-end;
+			margin-right: 8%;
 
-			@media screen and (min-width: 768px){
-				padding-top: 2%;
+			img{
+				cursor: pointer;
+				max-width: 20%;
+	
+				@media screen and (min-width: 768px){
+					padding-top: 2%;
+				}
 			}
 		}
+		
 	}
 }
 
@@ -808,6 +818,5 @@ footer{
 		}
 	}
 }
-
 
 
