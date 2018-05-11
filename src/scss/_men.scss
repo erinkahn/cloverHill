@@ -2,7 +2,7 @@
     background-image: url(../img/greenBkg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 92.45797365%; //green background height / whole height
+    // height: 420vh; 
     width: 100vw;
     z-index: -3;
 }
@@ -85,7 +85,6 @@
         @media screen and (min-width: 1440px){
             width: 27%;
         }
-    
         
         
         h2{
@@ -123,7 +122,102 @@
             // width: 29.375%; // 94 /320 
             background-color: #fff;
             padding: 11px 11px 30px 11px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,.3);
+            
         }
     }  
   
+}
+
+
+.social-men{
+    position: relative;
+    height: 300px;
+
+    @media screen and (min-width: 768px){
+       height: 10px;
+    }
+    @media screen and (min-width: 1224px){
+        height: 130px;
+     }
+
+    img{
+        position: absolute;
+        z-index: 4;
+        width: 20%;
+
+        @media screen and (min-width: 768px){
+            width: 10%;
+        }
+        @media screen and (min-width: 1024px){
+            width: 8%;
+        }
+        @media screen and (min-width: 1440px){
+            width: 6%;
+        }
+
+        &:first-child, &:last-child{
+            &:hover{
+                transform: rotate(45deg);
+                transition: .4s ease;
+            }
+        }
+
+        &:nth-child(2){
+            &:hover{
+                transform: rotate(-45deg);
+                transition: .4s ease;
+            }
+        }
+
+        //yellow
+        &:first-child{
+            bottom: 70%;
+            left: 16%;
+
+            @media screen and (min-width: 768px){
+                bottom: -13px;
+                left: 60%;
+            }
+            @media screen and (min-width: 1024px){
+                bottom: -26px;
+                left: 63%;
+            }
+            @media screen and (min-width: 1440px){
+                left: 68%;
+            }
+        }
+
+        //green
+        &:nth-child(2){
+            bottom: 58%;
+            right: 10%;
+
+            @media screen and (min-width: 768px){
+                bottom: -13px;
+                right: 17%;
+            }
+            @media screen and (min-width: 1024px){
+                bottom: -26px;
+            }
+            @media screen and (min-width: 1440px){
+                right: 16%;
+            }
+        }
+
+        //pink  
+        &:last-child{
+            right: 43%;
+            bottom: 20%;
+
+            @media screen and (min-width: 768px){
+                bottom: -13px;
+                right: 5%;
+            }
+            @media screen and (min-width: 1024px){
+                right: 6%;
+                bottom: -26px;
+            }
+        }
+    }
 }
