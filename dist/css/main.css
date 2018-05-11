@@ -485,6 +485,22 @@ header nav .nav_list li a:hover {
 	color: #f69679;
 }
 
+header nav .nav_list li a.activem {
+	background-image: url("../img/greenactive.png");
+	background-position: bottom;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	padding: 4px;
+}
+
+header nav .nav_list li a.activew {
+	background-image: url("../img/yellowactive.png");
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	padding: 6px;
+}
+
 header div a {
 	cursor: pointer;
 	display: flex;
@@ -580,6 +596,8 @@ header div a img {
 
 .whats-new {
 	margin-bottom: 40%;
+	opacity: 0;
+	transition: all 200ms ease-in;
 }
 
 @media screen and (min-width: 768px) {
@@ -640,6 +658,10 @@ header div a img {
 	width: 57%;
 }
 
+.js-whatsnew-animate {
+	opacity: 1;
+}
+
 .slick-prev.slick-arrow {
 	position: relative;
 }
@@ -680,6 +702,8 @@ button.slick-prev.slick-arrow::before {
 .image-grid {
 	position: relative;
 	width: 100%;
+	opacity: 0;
+	transition: all 200ms ease;
 }
 
 @media screen and (min-width: 768px) {
@@ -727,6 +751,10 @@ button.slick-prev.slick-arrow::before {
 	.image-grid::after {
 		bottom: 23%;
 	}
+}
+
+.js-imggrid-animate {
+	opacity: 1;
 }
 
 .grid-images {
