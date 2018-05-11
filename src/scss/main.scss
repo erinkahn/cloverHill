@@ -328,8 +328,6 @@ button.slick-prev.slick-arrow{
 .image-grid{
 	position: relative;
 	width: 100%;
-	opacity: 0;
-	transition: all 200ms ease;
 
 	@media screen and (min-width: 768px){
 		padding-bottom: 40%;
@@ -378,9 +376,6 @@ button.slick-prev.slick-arrow{
 	
 }
 
-.js-imggrid-animate{
-	opacity: 1;
-}
 
 
 
@@ -423,6 +418,13 @@ button.slick-prev.slick-arrow{
 			height: 0;
 			padding-bottom: 100%; //trick makes rectangle
 			position: relative;
+			opacity: 0;
+			transition: all 200ms ease;
+
+			&.js-imggrid-animate{
+				opacity: 1;
+			}
+			
 
 			&:hover{
 
@@ -457,6 +459,13 @@ button.slick-prev.slick-arrow{
 				height: 0;
 				padding-bottom: 100%; //trick makes square
 				position: relative;
+				opacity: 0;
+				transition: all 200ms ease;
+				transition-delay: .2s;
+
+				&.js-imggrid-animate{
+					opacity: 1;
+				}
 
 				&:hover{
 
@@ -488,6 +497,13 @@ button.slick-prev.slick-arrow{
 				height: 0;
 				padding-bottom: 100%; //makes square trick
 				position: relative;
+				opacity: 0;
+				transition: all 200ms ease;
+				transition-delay: .4s;
+
+				&.js-imggrid-animate{
+					opacity: 1;
+				}
 
 				&:hover{
 
@@ -530,6 +546,13 @@ button.slick-prev.slick-arrow{
 			height: 0;
 			padding-bottom: 50%; // half of grid img height
 			position: relative;
+			opacity: 0;
+			transition: all 200ms ease;
+			transition-delay: .6s;
+
+			&.js-imggrid-animate{
+				opacity: 1;
+			}
 
 			&:hover{
 
@@ -561,6 +584,13 @@ button.slick-prev.slick-arrow{
 			height: 0;
 			padding-bottom: 50%; // half of grid img height
 			position: relative;
+			opacity: 0;
+			transition: all 200ms ease;
+			transition-delay: .8s;
+
+			&.js-imggrid-animate{
+				opacity: 1;
+			}
 
 			&:hover{
 
@@ -584,7 +614,6 @@ button.slick-prev.slick-arrow{
 	}
 }
 
-		
 
 
 

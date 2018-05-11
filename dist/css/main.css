@@ -702,8 +702,6 @@ button.slick-prev.slick-arrow::before {
 .image-grid {
 	position: relative;
 	width: 100%;
-	opacity: 0;
-	transition: all 200ms ease;
 }
 
 @media screen and (min-width: 768px) {
@@ -753,10 +751,6 @@ button.slick-prev.slick-arrow::before {
 	}
 }
 
-.js-imggrid-animate {
-	opacity: 1;
-}
-
 .grid-images {
 	margin: 0 auto;
 	width: 100%;
@@ -801,6 +795,12 @@ button.slick-prev.slick-arrow::before {
 	height: 0;
 	padding-bottom: 100%;
 	position: relative;
+	opacity: 0;
+	transition: all 200ms ease;
+}
+
+.grid-images .a .onSale.js-imggrid-animate {
+	opacity: 1;
 }
 
 .grid-images .a .onSale:hover h3 {
@@ -833,6 +833,13 @@ button.slick-prev.slick-arrow::before {
 	height: 0;
 	padding-bottom: 100%;
 	position: relative;
+	opacity: 0;
+	transition: all 200ms ease;
+	transition-delay: .2s;
+}
+
+.grid-images .a .a2 .backpacks.js-imggrid-animate {
+	opacity: 1;
 }
 
 .grid-images .a .a2 .backpacks:hover h3 {
@@ -860,6 +867,13 @@ button.slick-prev.slick-arrow::before {
 	height: 0;
 	padding-bottom: 100%;
 	position: relative;
+	opacity: 0;
+	transition: all 200ms ease;
+	transition-delay: .4s;
+}
+
+.grid-images .a .a2 .overalls.js-imggrid-animate {
+	opacity: 1;
 }
 
 .grid-images .a .a2 .overalls:hover h3 {
@@ -899,6 +913,13 @@ button.slick-prev.slick-arrow::before {
 	height: 0;
 	padding-bottom: 50%;
 	position: relative;
+	opacity: 0;
+	transition: all 200ms ease;
+	transition-delay: .6s;
+}
+
+.grid-images .b .bestSellers.js-imggrid-animate {
+	opacity: 1;
 }
 
 .grid-images .b .bestSellers:hover h3 {
@@ -926,6 +947,13 @@ button.slick-prev.slick-arrow::before {
 	height: 0;
 	padding-bottom: 50%;
 	position: relative;
+	opacity: 0;
+	transition: all 200ms ease;
+	transition-delay: .8s;
+}
+
+.grid-images .b .summer18.js-imggrid-animate {
+	opacity: 1;
 }
 
 .grid-images .b .summer18:hover h3 {
