@@ -147,6 +147,18 @@ table {
 	}
 }
 
+.categories {
+	position: absolute;
+	right: 22%;
+	margin-top: 21%;
+}
+
+.categories ul li {
+	color: #fff;
+	font-family: futura;
+	line-height: 1.4em;
+}
+
 .shop-gallery {
 	padding: 70% 0 20% 0;
 	display: flex;
