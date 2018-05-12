@@ -407,10 +407,6 @@ header {
 	}
 }
 
-header nav {
-	cursor: pointer;
-}
-
 header nav .nav_list {
 	display: flex;
 	flex-direction: row;
@@ -442,7 +438,6 @@ header nav .nav_list {
 }
 
 header nav .nav_list li {
-	cursor: pointer;
 	font-family: futura;
 	padding: 0 18px;
 }
@@ -474,7 +469,6 @@ header nav .nav_list li {
 }
 
 header nav .nav_list li a {
-	cursor: pointer;
 	z-index: 4;
 	text-decoration: none;
 	color: #000;
@@ -502,14 +496,12 @@ header nav .nav_list li a.activew {
 }
 
 header div a {
-	cursor: pointer;
 	display: flex;
 	justify-content: flex-end;
 	margin-right: 8%;
 }
 
 header div a img {
-	cursor: pointer;
 	max-width: 20%;
 }
 
@@ -795,12 +787,6 @@ button.slick-prev.slick-arrow::before {
 	height: 0;
 	padding-bottom: 100%;
 	position: relative;
-	opacity: 0;
-	transition: all 200ms ease;
-}
-
-.grid-images .a .onSale.js-imggrid-animate {
-	opacity: 1;
 }
 
 .grid-images .a .onSale:hover h3 {
@@ -833,13 +819,6 @@ button.slick-prev.slick-arrow::before {
 	height: 0;
 	padding-bottom: 100%;
 	position: relative;
-	opacity: 0;
-	transition: all 200ms ease;
-	transition-delay: .2s;
-}
-
-.grid-images .a .a2 .backpacks.js-imggrid-animate {
-	opacity: 1;
 }
 
 .grid-images .a .a2 .backpacks:hover h3 {
@@ -867,13 +846,6 @@ button.slick-prev.slick-arrow::before {
 	height: 0;
 	padding-bottom: 100%;
 	position: relative;
-	opacity: 0;
-	transition: all 200ms ease;
-	transition-delay: .4s;
-}
-
-.grid-images .a .a2 .overalls.js-imggrid-animate {
-	opacity: 1;
 }
 
 .grid-images .a .a2 .overalls:hover h3 {
@@ -913,13 +885,6 @@ button.slick-prev.slick-arrow::before {
 	height: 0;
 	padding-bottom: 50%;
 	position: relative;
-	opacity: 0;
-	transition: all 200ms ease;
-	transition-delay: .6s;
-}
-
-.grid-images .b .bestSellers.js-imggrid-animate {
-	opacity: 1;
 }
 
 .grid-images .b .bestSellers:hover h3 {
@@ -947,13 +912,6 @@ button.slick-prev.slick-arrow::before {
 	height: 0;
 	padding-bottom: 50%;
 	position: relative;
-	opacity: 0;
-	transition: all 200ms ease;
-	transition-delay: .8s;
-}
-
-.grid-images .b .summer18.js-imggrid-animate {
-	opacity: 1;
 }
 
 .grid-images .b .summer18:hover h3 {
