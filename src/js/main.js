@@ -9,3 +9,38 @@ to verify that you're working in the right files.`)
 // })
 
 
+$('.slider').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    arrow: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [{
+        breakpoint: 1440,
+        settings: {
+            slidesToShow: 6,
+            slidesToScroll: 3,
+            infinite: true,
+        }
+    }, {
+        breakpoint: 1200,
+        settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+        }
+    },{
+        breakpoint: 768,
+        settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+        }
+    },{
+        breakpoint: 480,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+        }    
+    }]
+});

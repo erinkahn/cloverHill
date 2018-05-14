@@ -10,7 +10,7 @@
 .occasion{
     position: relative;
 
-    h1{
+    .men{
         white-space: nowrap;
         position: absolute;
         margin: 30% 0 0% 10%;
@@ -111,6 +111,7 @@
         @media screen and (min-width: 1224px){
            padding-right: 93px;
         }
+
 
         li{
             color: #fff;
