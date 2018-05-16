@@ -587,6 +587,12 @@ header div {
 	text-align: right;
 }
 
+@media screen and (max-width: 767px) {
+	header div {
+		margin-top: 3%;
+	}
+}
+
 header div a img {
 	width: 30%;
 }

@@ -103,11 +103,11 @@ header{
 
 	//logo
 	div{
-		// display: flex;
-		// justify-content: flex-end;
 		margin-right: 8%;
 		text-align: right;
-		
+		@media screen and (max-width: 767px){
+			margin-top: 3%;
+		}
 		a{
 
 			img{
