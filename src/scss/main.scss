@@ -81,17 +81,19 @@ header{
 					}
 
 					&.activem{
-						background-image: url('../img/greenactive.png');
+						background-image: url('../img/greenactive.gif');
 						background-position: bottom;
 						background-size: 100% auto;
 						background-repeat: no-repeat;
+						animation-play-state: running;
 						padding: 4px;
 					}
 					&.activew{
-						background-image: url('../img/yellowactive.png');
+						background-image: url('../img/yellowactive.gif');
 						background-position: bottom;
 						background-repeat: no-repeat;
 						background-size: 100% auto;
+						animation-play-state: running;
 						padding: 6px;
 					}
 				}
