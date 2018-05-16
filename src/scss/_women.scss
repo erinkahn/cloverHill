@@ -2,7 +2,6 @@
     background-image: url(../img/yellowBkg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    // height: 420vh; 
     width: 100vw;
     z-index: -3;
 }
@@ -26,23 +25,17 @@
 
         @media screen and (min-width: 768px){
             font-size: 50px;
-            margin: 20% 0 0 22%;
+            margin: 20% 0 0 8.3%;
         }
 
         @media screen and (min-width: 1024px){
             font-size: 64px;
-            margin: 20% 0 0 14%;
         }
 
         @media screen and (min-width: 1224px){
             font-size: 74px;
-            margin: 20% 0 0 17.3%;
-        }
-
-        @media screen and (min-width: 1440px){
-            margin: 20% 0 0 18.5%;
-        }
-        
+            margin-top: 16%;
+        }        
        
     }
 }
