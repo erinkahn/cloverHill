@@ -1056,7 +1056,7 @@ button.slick-prev.slick-arrow::before {
 
 @media screen and (min-width: 1440px) {
 	.gram-section .at {
-		margin-top: 1%;
+		margin-top: 10%;
 		margin-left: 15%;
 		padding-bottom: 10%;
 	}
