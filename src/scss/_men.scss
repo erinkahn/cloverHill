@@ -2,15 +2,21 @@
     background-image: url(../img/greenBkg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    // height: 420vh; 
-    width: 100vw;
+    width: 100%;
     z-index: -3;
 }
 
 .occasion{
-    position: relative;
+    @media screen and (max-width: 767px){
+        display: flex;
+        justify-content: center;
+    }
 
     .men{
+        @media screen and (max-width: 767px){
+            margin: 31% 0 0% 0%;
+            text-align: center;
+        }
         white-space: nowrap;
         position: absolute;
         margin: 30% 0 0% 10%;
@@ -48,7 +54,7 @@
             display: block;
         }
         position: absolute;
-        margin-top: 37%;
+        margin-top: 38%;
         left: 9%;
         width: 55%;
 
@@ -69,13 +75,17 @@
 }
 
 .categories{
+    @media screen and (max-width: 767px){
+        justify-content: center;
+        display: flex;
+        align-content: center;
+        margin-top: 48%;
+    }
     display: flex;
     position: absolute;
-    left: 12%;
-    margin-top: 47%;
 
     @media screen and (min-width: 768px){
-        margin-top: 29%;
+        margin-top: 28%;
         left: 9%;
     }
     @media screen and (min-width: 1224px){
@@ -102,7 +112,14 @@
         li{
             color: #fff;
             font-family: futura;
-            line-height: 1.5em;
+            line-height: 1.9em;
+            @media screen and (min-width: 515px){
+                font-size: 1.2em;
+                line-height: 2em;
+            }
+            @media screen and (min-width: 768px){
+                font-size: 1em;
+            }
             @media screen and (min-width: 1224px){
                 line-height: 2em;
             }
@@ -137,29 +154,20 @@
     div{
         cursor: pointer;
         position: relative;
-        width: 73%;
-        padding: 6%;
+        height: 0;
+        margin: 3%;
+        width: 80%;
+        padding-bottom: 123%;
 
         @media screen and (min-width: 768px){
-            width: 30%;
-        }
-
-        @media screen and (min-width: 1024px){
-            width: 33%;
-        }
-
-        @media screen and (min-width: 1224px){
-            width: 33%;
-            padding: 3%;
-        }
-
-        @media screen and (min-width: 1440px){
+            margin: 6%;
             width: 20%;
+            padding-bottom: 31%;
         }
+
         
         a{
             cursor: pointer;
-            padding-top: 260px;
             transition: 0.2s ease;
 
             &:hover{
@@ -170,39 +178,19 @@
         h2{
             position: absolute;
             font-family: futura;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 71%;
-            height: 163%;
+            text-align: center;
+            width: 100%;
             color: #000;
             font-size: 1.2em;
             letter-spacing: 0.3em;
-
-            @media screen and (min-width: 768px){
-                width: 180px;
-                height: 142%;
-            }
-    
-            @media screen and (min-width: 1024px){
-                width: 183px;
-                height: 132%;
-            }
-
-            @media screen and (min-width: 1224px){
-                height: 151%;
-            }
-    
-            @media screen and (min-width: 1440px){
-                height: 146%;
-            }
+            bottom: 2%;
         }
 
         img{
             background-color: #fff;
             padding: 11px 11px 30px 11px;
             box-shadow: 0px 0px 10px rgba(0,0,0,.3);
-            
+            width: 100%;
         }
     }  
   

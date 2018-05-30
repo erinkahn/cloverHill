@@ -2,12 +2,15 @@
     background-image: url(../img/yellowBkg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
+    width: 100%;
     z-index: -3;
 }
 
 
+
 .occasion{
+    position: relative;
+    
    .women{
         white-space: nowrap;
         position: absolute;
