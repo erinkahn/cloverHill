@@ -149,6 +149,9 @@ header{
 	background-repeat: no-repeat;
 	background-position: 0 100%;
 	text-align: center;
+	@media screen and (min-width: 1513px){
+		height: 55vw;
+	}
 
 	//models
 	img{
