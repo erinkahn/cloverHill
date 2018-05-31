@@ -143,15 +143,13 @@ header{
 	}
 
 	width: 100%;
-	height: 56vw;   
+	height: 55vw;   
 	background-image: url(../img/heroBkg.png);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-position: 0 100%;
 	text-align: center;
-	@media screen and (min-width: 1513px){
-		height: 55vw;
-	}
+
 
 	//models
 	img{
