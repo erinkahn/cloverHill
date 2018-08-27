@@ -522,7 +522,7 @@ header {
 	position: relative;
 	z-index: 10;
 	height: 20vw;
-	width: 99%;
+	width: 96%;
 	margin-bottom: 22%;
 }
 
@@ -535,8 +535,8 @@ header {
 
 header nav {
 	position: absolute;
-	width: 100%;
-	left: 0;
+	width: 96%;
+	left: 13px;
 	top: 40vw;
 }
 
@@ -645,7 +645,7 @@ header div a img {
 .models {
 	position: relative;
 	width: 100%;
-	height: 56vw;
+	height: 55vw;
 	background-image: url(../img/heroBkg.png);
 	background-size: 100% auto;
 	background-repeat: no-repeat;
@@ -669,18 +669,12 @@ header div a img {
 	padding: 0 3%;
 }
 
-.models img:nth-child(1), .models img:nth-child(4) {
+.models img:nth-child(1) {
 	display: none;
 }
 
 @media screen and (min-width: 768px) {
 	.models img:nth-child(1) {
-		display: inline-block;
-	}
-}
-
-@media screen and (min-width: 1513px) {
-	.models img:nth-child(4) {
 		display: inline-block;
 	}
 }
@@ -719,7 +713,6 @@ header div a img {
 
 .whats-new {
 	margin-bottom: 40%;
-	opacity: 0;
 	transition: all 200ms ease-in;
 }
 
@@ -789,10 +782,6 @@ header div a img {
 .whats-new .slider div {
 	width: 100%;
 	text-align: center;
-}
-
-.js-whatsnew-animate {
-	opacity: 1;
 }
 
 .slick-prev.slick-arrow {
@@ -1313,8 +1302,21 @@ footer {
 }
 
 footer .footer-text {
-	margin-left: 12%;
+	display: flex;
+	justify-content: space-evenly;
 	letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 450px) {
+	footer .footer-text {
+		margin: 0 10%;
+	}
+}
+
+@media screen and (min-width: 451px) {
+	footer .footer-text {
+		margin: 0 30%;
+	}
 }
 
 footer .footer-text a {
@@ -1325,6 +1327,12 @@ footer .footer-text a {
 	color: #000;
 	font-family: futura;
 	font-weight: bold;
+}
+
+@media screen and (max-width: 399px) {
+	footer .footer-text a {
+		font-size: 0.8em;
+	}
 }
 
 footer .footer-text a:last-child {

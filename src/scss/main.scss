@@ -16,7 +16,7 @@ header{
 	position: relative;
 	z-index: 10;
 	height: 20vw;
-	width: 99%;
+	width: 96%;
 	margin-bottom: 22%;
 
 	@media screen and (min-width: 768px){
@@ -27,8 +27,8 @@ header{
 
 	nav{
 		position: absolute;
-		width: 100%;
-		left: 0;
+		width: 96%;
+		left: 13px;
 		top: 40vw;
 		@media screen and (min-width: 768px){
 			top: 14vw;
@@ -214,7 +214,7 @@ header{
 
 .whats-new{
 	margin-bottom: 40%;
-	opacity: 0;
+	// opacity: 0;
 	transition: all 200ms ease-in;
 
 	@media screen and (min-width: 768px){
@@ -275,9 +275,9 @@ header{
 
 }
 
-.js-whatsnew-animate{
-	opacity: 1;
-}
+// .js-whatsnew-animate{
+// 	opacity: 1;
+// }
 
 
 
@@ -804,10 +804,20 @@ footer{
 	height: 90px; 
 
 	.footer-text{
-		margin-left: 12%;
+		@media screen and (max-width: 450px){
+			margin: 0 10%;
+		}
+		display: flex;
+		justify-content: space-evenly;
 		letter-spacing: 0.1em;
+		@media screen and (min-width: 451px){
+			margin: 0 30%;
+		}
 
 		a{
+			@media screen and (max-width: 399px){
+				font-size: 0.8em;
+			}
 			padding-top: 36px;
 			display: inline-block; // sit next to each other in a row
 			padding-right: 9%;
